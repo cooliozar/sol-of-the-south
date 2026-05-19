@@ -76,7 +76,7 @@ export default function PressPage() {
   const quickFacts = {
     "Band Name": "Sol of the South",
     "Genre": "Southern Rock / Hard Rock",
-    "Formed": "2022",
+    "Formed": "2020",
     "Location": "Fort Worth, Texas",
     "Members": "Trey, Ivey, Jackson, Bobby",
     "Latest Release": "High Plains Thunder EP (2025)",
@@ -132,7 +132,7 @@ export default function PressPage() {
           <h2 className="text-3xl font-bold mb-6">Band Bio</h2>
           <div className="prose prose-invert max-w-none">
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              Formed in Fort Worth, TX in 2022, <strong>Sol of the South</strong> brings together 
+              Formed in Fort Worth, TX in 2020, <strong>Sol of the South</strong> brings together 
               four lifelong musicians with a shared love for heavy riffs, soulful melodies, and 
               the timeless spirit of southern rock. With Trey (vocals, guitar), Ivey (drums), 
               Jackson (guitar), and Bobby (bass), the band has quickly gained a reputation for 
@@ -141,7 +141,7 @@ export default function PressPage() {
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
               Their sound blends the raw power of modern hard rock with the soul and swagger of 
               classic southern rock, creating anthems that resonate across generations. From their 
-              2022 debut "Demo Sessions" to their latest release "High Plains Thunder" (2025), 
+              2020 debut "Demo Sessions" to their latest release "High Plains Thunder" (2025), 
               Sol of the South has consistently pushed the boundaries while honoring their Texas roots.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
