@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "photo-001",
+    "title": "On Stage",
+    "image_url": null,
+    "thumbnail_url": null,
+    "category": "live",
+    "shoot_date": "2026-05-02"
+  },
+  {
+    "id": "photo-002",
+    "title": "Full Band Live",
+    "image_url": null,
+    "thumbnail_url": null,
+    "category": "live",
+    "shoot_date": "2026-05-02"
+  },
+  {
+    "id": "photo-003",
+    "title": "Live — Texas",
+    "image_url": null,
+    "thumbnail_url": null,
+    "category": "live",
+    "shoot_date": "2026-05-02"
+  },
+  {
+    "id": "photo-004",
+    "title": "Stage Setup",
+    "image_url": null,
+    "thumbnail_url": null,
+    "category": "promo",
+    "shoot_date": "2026-05-02"
+  },
+  {
+    "id": "photo-005",
+    "title": "Rehearsal",
+    "image_url": null,
+    "thumbnail_url": null,
+    "category": "studio",
+    "shoot_date": "2025-01-01"
+  },
+  {
+    "id": "photo-006",
+    "title": "Rehearsal II",
+    "image_url": null,
+    "thumbnail_url": null,
+    "category": "studio",
+    "shoot_date": "2025-01-01"
+  },
+  {
+    "id": "photo-007",
+    "title": "Sol of the South",
+    "image_url": null,
+    "thumbnail_url": null,
+    "category": "promo",
+    "shoot_date": "2025-01-01"
+  }
+]

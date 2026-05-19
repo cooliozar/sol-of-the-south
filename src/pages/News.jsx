@@ -157,7 +157,8 @@ export default function NewsPage() {
         ) : (
           <div className="text-center py-20">
             <Tag className="w-20 h-20 mx-auto mb-6 text-gray-700" />
-            <p className="text-xl text-gray-500">No news posts yet. Check back soon!</p>
+            <h3 className="text-2xl font-bold mb-3 text-gray-300">Coming Soon</h3>
+            <p className="text-gray-500 max-w-sm mx-auto">News and updates are being prepared. Check back soon.</p>
           </div>
         )}
       </div>

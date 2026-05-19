@@ -244,11 +244,11 @@ export default function MerchPage() {
         ) : (
           <div className="text-center py-20">
             <ShoppingBag className="w-20 h-20 mx-auto mb-6 text-gray-700" />
-            <h3 className="text-2xl font-bold mb-2">No Merch Available</h3>
+            <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
             <p className="text-gray-500 mb-8">
-              {filter === "all" 
-                ? "Check back soon for awesome merch!" 
-                : "No items in this category yet."}
+              {filter === "all"
+                ? "Merch is currently being prepared. Check back soon."
+                : "Nothing in this category yet. More items on the way."}
             </p>
           </div>
         )}
