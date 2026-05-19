@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from "react";
+import { Show, Release } from "@/entities/all";
 import { motion } from "framer-motion";
 import { Music, Award, Users, MapPin } from "lucide-react";
 
 export default function AboutPage() {
   const [spotlightPos, setSpotlightPos] = useState(0);
+  const [shows, setShows] = useState([]);
+  const [releases, setReleases] = useState([]);
 
   // Spotlight sweep animation
   useEffect(() => {
@@ -14,53 +17,42 @@ export default function AboutPage() {
     return () => clearInterval(interval);
   }, []);
 
-  const milestones = [
-    { 
-      year: "2022", 
-      event: "Band Formation & Debut EP", 
-      description: "Four Fort Worth musicians unite with a shared vision. Released 'Demo Sessions' EP, capturing raw southern rock energy." 
-    },
-    { 
-      year: "2023", 
-      event: "Midnight Revival Album & First Tour", 
-      description: "Debut full-length album 'Midnight Revival' drops. First regional tour across Texas and Oklahoma, building a dedicated fanbase." 
-    },
-    { 
-      year: "2024", 
-      event: "Festival Circuit & Label Deal", 
-      description: "Played major Texas festivals. Signed with independent label Red Mesa Records. Sold out shows across the Southwest." 
-    },
-    { 
-      year: "2025", 
-      event: "High Plains Thunder EP", 
-      description: "Released 'High Plains Thunder' EP, showcasing evolved sound. Planning biggest tour yet with expanded reach across the South." 
-    }
-  ];
+  useEffect(() => {
+    Promise.all([Show.list(), Release.list()]).then(([showData, releaseData]) => {
+      setShows(showData);
+      setReleases(releaseData);
+    });
+  }, []);
+
+  const pastShows = shows.filter(s => s.status === 'past');
+  const uniqueStates = [...new Set(pastShows.map(s => s.state).filter(Boolean))];
+  const yearsRocking = new Date().getFullYear() - 2022;
+
 
   const bandMembers = [
     {
       name: "Trey",
       role: "Vocals & Guitar",
-      bio: "The driving force behind Sol of the South, Trey's powerful vocals and commanding guitar work anchor the band's signature sound. A Fort Worth native with deep roots in southern rock.",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400"
+      bio: "Bio coming soon.",
+      image: "/images/band/Trey.jpg"
     },
     {
       name: "Ivey",
       role: "Drums",
-      bio: "The heartbeat of the band, Ivey's explosive drumming brings raw energy and precision. Known for thunderous live performances that shake venues to their core.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+      bio: "Bio coming soon.",
+      image: "/images/band/Ivey.jpg"
     },
     {
       name: "Jackson",
       role: "Guitar",
-      bio: "A guitar virtuoso with blues and country influences, Jackson's soulful solos and intricate riffs add depth and emotion to every track.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+      bio: "Bio coming soon.",
+      image: "/images/band/Jackson.jpg"
     },
     {
       name: "Bobby",
       role: "Bass",
-      bio: "The foundation of Sol of the South's heavy sound, Bobby's bass lines drive the rhythm with power and groove, holding down the low end with authority.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400"
+      bio: "Bio coming soon.",
+      image: "/images/band/Bobby.jpg"
     }
   ];
 
@@ -140,17 +132,11 @@ export default function AboutPage() {
               and Bobby (bass), the band has quickly gained a reputation for electrifying live 
               performances and heartfelt songwriting.
             </p>
-            <p className="text-xl text-gray-300 leading-relaxed mb-6">
+            <p className="text-xl text-gray-300 leading-relaxed">
               Drawing inspiration from the Texas landscape and the rich tradition of southern rock, 
               Sol of the South crafts music that's both powerful and authentic. Their sound blends 
               crushing riffs with melodic hooks, creating anthems that resonate with anyone who's 
               ever felt the call of the open road.
-            </p>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              From their debut EP "Demo Sessions" to their latest release "High Plains Thunder," 
-              the band has consistently pushed themselves to grow while staying true to their roots. 
-              Whether playing intimate clubs or festival stages, Sol of the South delivers 
-              performances that leave audiences wanting more.
             </p>
           </motion.div>
         </div>
@@ -238,29 +224,8 @@ export default function AboutPage() {
             <p className="text-xl text-gray-400">From Fort Worth to the world</p>
           </motion.div>
 
-          <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-600 via-orange-600 to-red-600 hidden md:block" />
-
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="relative flex gap-8 items-start"
-                >
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-red-600 to-orange-600 rounded-full flex items-center justify-center font-bold text-sm relative z-10">
-                    {milestone.year}
-                  </div>
-                  <div className="flex-1 bg-white/5 rounded-xl p-6 border border-white/10">
-                    <h3 className="text-xl font-bold mb-2">{milestone.event}</h3>
-                    <p className="text-gray-400">{milestone.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg italic">More band history coming soon.</p>
           </div>
         </div>
       </section>
@@ -270,11 +235,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { icon: Music, label: "Releases", value: "3" },
-              { icon: MapPin, label: "States Toured", value: "4" },
-              { icon: Users, label: "Shows Played", value: "50+" },
-              { icon: Award, label: "Years Rocking", value: "3" }
-            ].map((stat, index) => (
+              releases.length > 0 && { icon: Music, label: "Releases", value: String(releases.length) },
+              uniqueStates.length > 0 && { icon: MapPin, label: "States Played", value: String(uniqueStates.length) },
+              pastShows.length > 0 && { icon: Users, label: "Shows Played", value: String(pastShows.length) },
+              { icon: Award, label: "Years Rocking", value: String(yearsRocking) }
+            ].filter(Boolean).map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
