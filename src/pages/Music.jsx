@@ -274,11 +274,17 @@ export default function MusicPage() {
                     }}
                   />
 
-                  <img
-                    src={release.cover_art_url || `https://images.unsplash.com/photo-${1514320291840 + index}?w=800`}
-                    alt={release.title}
-                    className="relative z-10 w-full h-full object-cover rounded-lg shadow-2xl"
-                  />
+                  {release.cover_art_url ? (
+                    <img
+                      src={release.cover_art_url}
+                      alt={release.title}
+                      className="relative z-10 w-full h-full object-cover rounded-lg shadow-2xl"
+                    />
+                  ) : (
+                    <div className="relative z-10 w-full h-full rounded-lg shadow-2xl bg-zinc-800 border border-white/10 flex items-center justify-center">
+                      <Disc3 className="w-16 h-16 text-zinc-600" />
+                    </div>
+                  )}
 
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center z-20">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity">
