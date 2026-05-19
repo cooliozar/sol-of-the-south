@@ -319,7 +319,7 @@ function LayoutContent({ children }) {
 
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs">
             <p>&copy; {new Date().getFullYear()} Sol of the South. All rights reserved.</p>
-            <p className="mt-1 text-gray-600">Fort Worth, Texas • Est. 2022</p>
+            <p className="mt-1 text-gray-600">Fort Worth, Texas • Est. 2020</p>
           </div>
         </div>
       </footer>

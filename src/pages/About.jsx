@@ -26,7 +26,7 @@ export default function AboutPage() {
 
   const pastShows = shows.filter(s => s.status === 'past');
   const uniqueStates = [...new Set(pastShows.map(s => s.state).filter(Boolean))];
-  const yearsRocking = new Date().getFullYear() - 2022;
+  const yearsRocking = new Date().getFullYear() - 2020;
 
 
   const bandMembers = [
@@ -126,7 +126,7 @@ export default function AboutPage() {
             className="prose prose-invert prose-lg max-w-none"
           >
             <p className="text-xl text-gray-300 leading-relaxed mb-6">
-              Formed in Fort Worth, TX in 2022, Sol of the South brings together four lifelong 
+              Formed in Fort Worth, TX in 2020, Sol of the South brings together four lifelong 
               musicians with a shared love for heavy riffs, soulful melodies, and the timeless 
               spirit of southern rock. With Trey (vocals, guitar), Ivey (drums), Jackson (guitar), 
               and Bobby (bass), the band has quickly gained a reputation for electrifying live 
