@@ -268,14 +268,16 @@ function LayoutContent({ children }) {
               {/* Social stickers */}
               <div className="flex gap-3 justify-center md:justify-start">
                 {[
-                  { name: 'Spotify', bg: '#1DB954' },
-                  { name: 'YouTube', bg: '#FF0000' },
-                  { name: 'Instagram', bg: '#E4405F' },
-                  { name: 'Facebook', bg: '#1877F2' }
+                  { name: 'YouTube',   url: 'http://www.youtube.com/@SoloftheSouth',        bg: '#FF0000' },
+                  { name: 'Instagram', url: 'https://www.instagram.com/solofthesouth/',     bg: '#E4405F' },
+                  { name: 'Facebook',  url: 'https://www.facebook.com/solofthesouth',       bg: '#1877F2' },
+                  { name: 'TikTok',    url: 'https://www.tiktok.com/@solofthesouth',        bg: '#010101' }
                 ].map((social) => (
-                  <a 
+                  <a
                     key={social.name}
-                    href="#"
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-9 h-9 rounded flex items-center justify-center transition-transform hover:scale-110"
                     style={{
                       background: social.bg,

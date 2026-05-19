@@ -17,9 +17,8 @@ export default function PhotosPage() {
     setPhotos(data);
   };
 
-  const filteredPhotos = filter === "all" 
-    ? photos 
-    : photos.filter(p => p.category === filter);
+  const filteredPhotos = (filter === "all" ? photos : photos.filter(p => p.category === filter))
+    .filter(p => p.image_url || p.thumbnail_url);
 
   const filters = [
     { value: "all", label: "All Photos" },
@@ -93,7 +92,8 @@ export default function PhotosPage() {
         ) : (
           <div className="text-center py-20">
             <Camera className="w-20 h-20 mx-auto mb-6 text-gray-700" />
-            <p className="text-xl text-gray-500">No photos in this category yet.</p>
+            <h3 className="text-2xl font-bold mb-3 text-gray-300">Coming Soon</h3>
+            <p className="text-gray-500 max-w-sm mx-auto">Photos are being prepared. Check back soon for live shots, promo photos, and studio sessions.</p>
           </div>
         )}
 

@@ -50,23 +50,37 @@ export default function MusicPage() {
         {/* Release Detail Hero */}
         <div className="relative h-[60vh] overflow-hidden">
           <div className="absolute inset-0">
-            <img
-              src={selectedRelease.cover_art_url || "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1200"}
-              alt={selectedRelease.title}
-              className="w-full h-full object-cover"
-            />
+            {selectedRelease.cover_art_url ? (
+              <img
+                src={selectedRelease.cover_art_url}
+                alt={selectedRelease.title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-zinc-900 via-zinc-800 to-black" />
+            )}
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black" />
           </div>
 
           <div className="relative h-full max-w-7xl mx-auto px-4 flex items-end pb-12">
             <div className="flex flex-col md:flex-row gap-8 items-end">
-              <motion.img
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                src={selectedRelease.cover_art_url || "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800"}
-                alt={selectedRelease.title}
-                className="w-64 h-64 object-cover rounded-lg shadow-2xl"
-              />
+              {selectedRelease.cover_art_url ? (
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  src={selectedRelease.cover_art_url}
+                  alt={selectedRelease.title}
+                  className="w-64 h-64 object-cover rounded-lg shadow-2xl"
+                />
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="w-64 h-64 rounded-lg shadow-2xl bg-zinc-800 border border-white/10 flex items-center justify-center flex-shrink-0"
+                >
+                  <Disc3 className="w-20 h-20 text-zinc-600" />
+                </motion.div>
+              )}
               <div className="pb-4">
                 <div className="inline-block px-3 py-1 bg-red-600/20 text-red-400 rounded-full text-xs font-semibold mb-3 border border-red-600/30 uppercase">
                   {selectedRelease.release_type}
@@ -260,11 +274,17 @@ export default function MusicPage() {
                     }}
                   />
 
-                  <img
-                    src={release.cover_art_url || `https://images.unsplash.com/photo-${1514320291840 + index}?w=800`}
-                    alt={release.title}
-                    className="relative z-10 w-full h-full object-cover rounded-lg shadow-2xl"
-                  />
+                  {release.cover_art_url ? (
+                    <img
+                      src={release.cover_art_url}
+                      alt={release.title}
+                      className="relative z-10 w-full h-full object-cover rounded-lg shadow-2xl"
+                    />
+                  ) : (
+                    <div className="relative z-10 w-full h-full rounded-lg shadow-2xl bg-zinc-800 border border-white/10 flex items-center justify-center">
+                      <Disc3 className="w-16 h-16 text-zinc-600" />
+                    </div>
+                  )}
 
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center z-20">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity">
