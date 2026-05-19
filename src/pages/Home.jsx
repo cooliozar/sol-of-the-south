@@ -321,7 +321,7 @@ export default function Home() {
                 Upcoming Shows
               </h2>
               <p className="text-gray-400 uppercase tracking-wide text-sm font-semibold">
-                Catch us live on tour
+                Catch us live
               </p>
             </div>
             <Link
