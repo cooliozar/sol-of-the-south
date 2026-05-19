@@ -1,0 +1,57 @@
+[
+  {
+    "id": "show-001",
+    "date": "2026-06-14T20:00:00",
+    "venue": "Billy Bob's Texas",
+    "city": "Fort Worth",
+    "state": "TX",
+    "country": "USA",
+    "status": "upcoming",
+    "ticket_url": null,
+    "notes": "Hometown show. Doors at 7pm."
+  },
+  {
+    "id": "show-002",
+    "date": "2026-07-04T21:00:00",
+    "venue": "Stubb's Waller Creek Amphitheater",
+    "city": "Austin",
+    "state": "TX",
+    "country": "USA",
+    "status": "upcoming",
+    "ticket_url": null,
+    "notes": "4th of July Weekend — outdoor amphitheater. All ages."
+  },
+  {
+    "id": "show-003",
+    "date": "2026-08-22T19:30:00",
+    "venue": "Granada Theater",
+    "city": "Dallas",
+    "state": "TX",
+    "country": "USA",
+    "status": "upcoming",
+    "ticket_url": null,
+    "notes": null
+  },
+  {
+    "id": "show-004",
+    "date": "2026-02-28T20:00:00",
+    "venue": "White Rabbit",
+    "city": "San Antonio",
+    "state": "TX",
+    "country": "USA",
+    "status": "past",
+    "ticket_url": null,
+    "notes": null
+  },
+  {
+    "id": "show-005",
+    "date": "2025-10-10T20:00:00",
+    "venue": "House of Blues",
+    "city": "Houston",
+    "state": "TX",
+    "country": "USA",
+    "status": "past",
+    "ticket_url": null,
+    "notes": null
+  }
+]

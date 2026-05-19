@@ -1,0 +1,74 @@
+[
+  {
+    "id": "track-001",
+    "release_id": "release-001",
+    "track_number": 1,
+    "title": "High Plains Thunder",
+    "duration": "4:12",
+    "is_preview": true,
+    "audio_url": null
+  },
+  {
+    "id": "track-002",
+    "release_id": "release-001",
+    "track_number": 2,
+    "title": "Red Mesa Run",
+    "duration": "3:47",
+    "is_preview": false,
+    "audio_url": null
+  },
+  {
+    "id": "track-003",
+    "release_id": "release-001",
+    "track_number": 3,
+    "title": "Snakeskin Gospel",
+    "duration": "5:21",
+    "is_preview": false,
+    "audio_url": null
+  },
+  {
+    "id": "track-004",
+    "release_id": "release-001",
+    "track_number": 4,
+    "title": "Dust and Glory",
+    "duration": "4:33",
+    "is_preview": false,
+    "audio_url": null
+  },
+  {
+    "id": "track-005",
+    "release_id": "release-001",
+    "track_number": 5,
+    "title": "All the Way Down",
+    "duration": "6:08",
+    "is_preview": false,
+    "audio_url": null
+  },
+  {
+    "id": "track-006",
+    "release_id": "release-002",
+    "track_number": 1,
+    "title": "Midnight Revival",
+    "duration": "4:55",
+    "is_preview": true,
+    "audio_url": null
+  },
+  {
+    "id": "track-007",
+    "release_id": "release-002",
+    "track_number": 2,
+    "title": "Devil's Backbone",
+    "duration": "3:58",
+    "is_preview": false,
+    "audio_url": null
+  },
+  {
+    "id": "track-008",
+    "release_id": "release-002",
+    "track_number": 3,
+    "title": "Fort Worth Burning",
+    "duration": "4:22",
+    "is_preview": false,
+    "audio_url": null
+  }
+]

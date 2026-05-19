@@ -1,0 +1,24 @@
+[
+  {
+    "id": "post-001",
+    "title": "High Plains Thunder Is Out Now",
+    "excerpt": "Our new EP is finally here. Five tracks recorded raw, live-to-tape, no fixes — exactly how we play it on stage.",
+    "content": "## It's Here\n\nAfter nearly a year in the making, **High Plains Thunder** is out now on all platforms.\n\nWe recorded these five tracks the same way we've always recorded — raw, live-to-tape, together in a room. No fixing it in the mix. No samples. Just four guys playing as hard as they can.\n\n*High Plains Thunder* is the truest thing we've put out. We hope it hits you the same way it hit us when we played it back for the first time.\n\n**Stream it everywhere. Buy the vinyl. Come see us live.**",
+    "cover_image_url": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1200",
+    "published": true,
+    "published_date": "2025-09-05",
+    "created_by": "Sol of the South",
+    "tags": ["new release", "ep", "high plains thunder"]
+  },
+  {
+    "id": "post-002",
+    "title": "Summer 2026 Tour Dates Announced",
+    "excerpt": "We're hitting the road this summer. Fort Worth, Austin, Dallas, and more — tickets on sale soon.",
+    "content": "## Summer 2026 — We're Coming\n\nWe've been in the garage for the past few months working on new material, and it's time to bring it to the stage.\n\nThis summer we're playing some of our favorite venues across Texas — Billy Bob's to kick things off, then Austin and Dallas to close out the run.\n\nMore dates TBA. If you want us in your city, reach out through the contact page.\n\n**Tickets go on sale at show venues. Check back for links.**",
+    "cover_image_url": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=1200",
+    "published": true,
+    "published_date": "2026-04-01",
+    "created_by": "Sol of the South",
+    "tags": ["tour", "shows", "summer 2026"]
+  }
+]

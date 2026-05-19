@@ -1,0 +1,28 @@
+[
+  {
+    "id": "release-001",
+    "title": "High Plains Thunder",
+    "artist": "Sol of the South",
+    "release_date": "2025-09-05",
+    "release_type": "ep",
+    "featured": true,
+    "description": "Raw. Relentless. Rooted in the red dirt of North Texas. Five tracks of uncut southern rock fury — the boldest statement Sol of the South has made yet.",
+    "cover_art_url": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800",
+    "spotify_url": null,
+    "apple_music_url": null,
+    "bandcamp_url": null
+  },
+  {
+    "id": "release-002",
+    "title": "Midnight Revival",
+    "artist": "Sol of the South",
+    "release_date": "2023-03-17",
+    "release_type": "album",
+    "featured": false,
+    "description": "The debut full-length. Eleven tracks recorded live-to-tape in a Fort Worth garage studio — the raw energy that started everything.",
+    "cover_art_url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800",
+    "spotify_url": null,
+    "apple_music_url": null,
+    "bandcamp_url": null
+  }
+]
