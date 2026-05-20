@@ -11,7 +11,7 @@
 
 import React from 'react';
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 // ── Minimal mocks ────────────────────────────────────────────────────────────
@@ -207,5 +207,66 @@ describe('Press page', () => {
   it('does NOT contain Red Mesa Records', () => {
     renderWithRouter(<PressPage />);
     expect(screen.queryByText(/red mesa records/i)).toBeNull();
+  });
+});
+
+// ── Videos data ───────────────────────────────────────────────────────────────
+
+import videosData from '@/data/videos.json';
+
+describe('Videos data', () => {
+  it('contains the Feel You live performance entry', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry).toBeDefined();
+  });
+
+  it('Feel You has video_type live_performance', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.video_type).toBe('live_performance');
+  });
+
+  it('Feel You has a local video_url', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.video_url).toBe('/videos/sots-feel-you-live-truth-vinyl-2026.mp4');
+  });
+
+  it('Feel You has a local thumbnail_url', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.thumbnail_url).toBe('/images/videos/sots-feel-you-thumbnail.jpg');
+  });
+
+  it('Feel You thumbnail does not use an external URL', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.thumbnail_url).not.toMatch(/^https?:\/\//);
+  });
+
+  it('Feel You description is Live at Truth Vinyl', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.description).toBe('Live at Truth Vinyl');
+  });
+});
+
+// ── Videos page ───────────────────────────────────────────────────────────────
+
+import VideosPage from '@/pages/Videos';
+
+describe('Videos page', () => {
+  it('renders the Feel You card in All Videos', async () => {
+    renderWithRouter(<VideosPage />);
+    await waitFor(() => expect(screen.getByText('Feel You')).toBeInTheDocument());
+  });
+
+  it('renders the Live at Truth Vinyl description', async () => {
+    renderWithRouter(<VideosPage />);
+    await waitFor(() => expect(screen.getByText('Live at Truth Vinyl')).toBeInTheDocument());
+  });
+
+  it('renders nav and footer on /Videos route', () => {
+    const { container } = renderWithRouter(
+      <Layout><div /></Layout>,
+      { initialEntries: ['/Videos'] }
+    );
+    expect(container.querySelector('nav')).not.toBeNull();
+    expect(container.querySelector('footer')).not.toBeNull();
   });
 });

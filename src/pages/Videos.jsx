@@ -100,7 +100,7 @@ export default function VideosPage() {
                   </div>
                   <div className="absolute top-3 left-3">
                     <span className="px-2 py-1 bg-black/80 backdrop-blur-sm text-xs font-semibold rounded uppercase">
-                      {video.video_type.replace('_', ' ')}
+                      {video.video_type?.replace(/_/g, ' ')}
                     </span>
                   </div>
                 </div>
@@ -156,6 +156,17 @@ export default function VideosPage() {
                         className="w-full h-full"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
+                      />
+                    ) : selectedVideo.video_url ? (
+                      <video
+                        key={selectedVideo.id}
+                        src={selectedVideo.video_url}
+                        poster={selectedVideo.thumbnail_url || undefined}
+                        controls
+                        autoPlay
+                        playsInline
+                        className="w-full h-full object-contain bg-black"
+                        preload="metadata"
                       />
                     ) : (
                       <div className="w-full h-full bg-zinc-900 flex items-center justify-center text-gray-500">
