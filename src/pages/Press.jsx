@@ -80,7 +80,7 @@ export default function PressPage() {
     "Location": "Fort Worth, Texas",
     "Members": "Trey, Ivey, Jackson, Bobby",
     "Latest Release": "High Plains Thunder EP (2025)",
-    "Label": "Red Mesa Records",
+    "Label": "JAMusicArt Records",
     "Booking": "Available for festivals & venues"
   };
 
@@ -147,7 +147,7 @@ export default function PressPage() {
             <p className="text-lg text-gray-300 leading-relaxed">
               The band has toured extensively across Texas, Oklahoma, and neighboring states, 
               building a dedicated fanbase through relentless gigging and authentic connection 
-              with audiences. Now signed to independent label Red Mesa Records, Sol of the South 
+              with audiences. Now signed to independent label JAMusicArt Records, Sol of the South 
               is poised to bring their explosive live show to bigger stages nationwide.
             </p>
           </div>
