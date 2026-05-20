@@ -1,58 +1,34 @@
 [
   {
     "id": "photo-001",
-    "title": "On Stage",
-    "image_url": null,
-    "thumbnail_url": null,
-    "category": "live",
+    "title": "Bobby — Promo",
+    "image_url": "/images/photos/sol-promo-bobby.jpg",
+    "thumbnail_url": "/images/photos/sol-promo-bobby.jpg",
+    "category": "promo",
     "shoot_date": "2026-05-02"
   },
   {
     "id": "photo-002",
-    "title": "Full Band Live",
-    "image_url": null,
-    "thumbnail_url": null,
-    "category": "live",
+    "title": "Ivey — Promo",
+    "image_url": "/images/photos/sol-promo-ivey.jpg",
+    "thumbnail_url": "/images/photos/sol-promo-ivey.jpg",
+    "category": "promo",
     "shoot_date": "2026-05-02"
   },
   {
     "id": "photo-003",
-    "title": "Live — Texas",
-    "image_url": null,
-    "thumbnail_url": null,
-    "category": "live",
+    "title": "Jackson — Promo",
+    "image_url": "/images/photos/sol-promo-jackson.jpg",
+    "thumbnail_url": "/images/photos/sol-promo-jackson.jpg",
+    "category": "promo",
     "shoot_date": "2026-05-02"
   },
   {
     "id": "photo-004",
-    "title": "Stage Setup",
-    "image_url": null,
-    "thumbnail_url": null,
+    "title": "Trey — Promo",
+    "image_url": "/images/photos/sol-promo-trey.jpg",
+    "thumbnail_url": "/images/photos/sol-promo-trey.jpg",
     "category": "promo",
     "shoot_date": "2026-05-02"
-  },
-  {
-    "id": "photo-005",
-    "title": "Rehearsal",
-    "image_url": null,
-    "thumbnail_url": null,
-    "category": "studio",
-    "shoot_date": "2025-01-01"
-  },
-  {
-    "id": "photo-006",
-    "title": "Rehearsal II",
-    "image_url": null,
-    "thumbnail_url": null,
-    "category": "studio",
-    "shoot_date": "2025-01-01"
-  },
-  {
-    "id": "photo-007",
-    "title": "Sol of the South",
-    "image_url": null,
-    "thumbnail_url": null,
-    "category": "promo",
-    "shoot_date": "2025-01-01"
   }
 ]
