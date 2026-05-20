@@ -1,6 +1,11 @@
 # Base44 scaffolding (removed runtime dependency — not needed in standalone repo)
 base44/
 
+# Large video files — GitHub 100 MB limit; host on YouTube/Vimeo/Blob for production
+public/videos/*.mp4
+public/videos/*.mov
+public/videos/*.webm
+
 #env
 .env
 .env.*

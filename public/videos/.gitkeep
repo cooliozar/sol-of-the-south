@@ -1,0 +1,4 @@
+# Video files are excluded from git (>100 MB GitHub limit).
+# For production, upload to YouTube or Vimeo and set youtube_id / vimeo_id
+# in src/data/videos.json instead of video_url.
+# For local development, copy the MP4 here manually.

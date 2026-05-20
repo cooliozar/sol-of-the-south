@@ -11,7 +11,7 @@
 
 import React from 'react';
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 // ── Minimal mocks ────────────────────────────────────────────────────────────
@@ -207,5 +207,76 @@ describe('Press page', () => {
   it('does NOT contain Red Mesa Records', () => {
     renderWithRouter(<PressPage />);
     expect(screen.queryByText(/red mesa records/i)).toBeNull();
+  });
+});
+
+// ── Videos data ───────────────────────────────────────────────────────────────
+
+import videosData from '@/data/videos.json';
+
+describe('Videos data', () => {
+  it('contains the Feel You live performance entry', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry).toBeDefined();
+  });
+
+  it('Feel You has video_type live_performance', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.video_type).toBe('live_performance');
+  });
+
+  it('Feel You video_url is null pending external hosting decision', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.video_url).toBeNull();
+  });
+
+  it('Feel You has a local thumbnail_url', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.thumbnail_url).toBe('/images/videos/sots-feel-you-thumbnail.jpg');
+  });
+
+  it('Feel You thumbnail does not use an external URL', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.thumbnail_url).not.toMatch(/^https?:\/\//);
+  });
+
+  it('Feel You description is Live at Truth Vinyl', () => {
+    const entry = videosData.find((v) => v.title === 'Feel You');
+    expect(entry.description).toBe('Live at Truth Vinyl');
+  });
+});
+
+// ── Videos page ───────────────────────────────────────────────────────────────
+
+import VideosPage from '@/pages/Videos';
+
+describe('Videos page', () => {
+  it('renders the Feel You card in All Videos', async () => {
+    renderWithRouter(<VideosPage />);
+    await waitFor(() => expect(screen.getByText('Feel You')).toBeInTheDocument());
+  });
+
+  it('renders the Live at Truth Vinyl description', async () => {
+    renderWithRouter(<VideosPage />);
+    await waitFor(() => expect(screen.getByText('Live at Truth Vinyl')).toBeInTheDocument());
+  });
+
+  it('renders nav and footer on /Videos route', () => {
+    const { container } = renderWithRouter(
+      <Layout><div /></Layout>,
+      { initialEntries: ['/Videos'] }
+    );
+    expect(container.querySelector('nav')).not.toBeNull();
+    expect(container.querySelector('footer')).not.toBeNull();
+  });
+
+  it('shows "Full video coming soon" fallback when no video source is set', async () => {
+    renderWithRouter(<VideosPage />);
+    // Wait for the card to appear, then click it to open the modal
+    const card = await waitFor(() => screen.getByText('Feel You'));
+    card.closest('[class*="cursor-pointer"]')?.click() ?? card.click();
+    await waitFor(() =>
+      expect(screen.getByText(/full video coming soon/i)).toBeInTheDocument()
+    );
   });
 });

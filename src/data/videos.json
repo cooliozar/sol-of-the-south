@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "id": "video-001",
+    "title": "Feel You",
+    "description": "Live at Truth Vinyl",
+    "video_type": "live_performance",
+    "thumbnail_url": "/images/videos/sots-feel-you-thumbnail.jpg",
+    "video_url": null,
+    "youtube_id": null,
+    "vimeo_id": null,
+    "published_date": "2026-05-02"
+  }
+]
