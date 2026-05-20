@@ -225,9 +225,9 @@ describe('Videos data', () => {
     expect(entry.video_type).toBe('live_performance');
   });
 
-  it('Feel You has a local video_url', () => {
+  it('Feel You video_url is null pending external hosting decision', () => {
     const entry = videosData.find((v) => v.title === 'Feel You');
-    expect(entry.video_url).toBe('/videos/sots-feel-you-live-truth-vinyl-2026.mp4');
+    expect(entry.video_url).toBeNull();
   });
 
   it('Feel You has a local thumbnail_url', () => {
@@ -268,5 +268,15 @@ describe('Videos page', () => {
     );
     expect(container.querySelector('nav')).not.toBeNull();
     expect(container.querySelector('footer')).not.toBeNull();
+  });
+
+  it('shows "Full video coming soon" fallback when no video source is set', async () => {
+    renderWithRouter(<VideosPage />);
+    // Wait for the card to appear, then click it to open the modal
+    const card = await waitFor(() => screen.getByText('Feel You'));
+    card.closest('[class*="cursor-pointer"]')?.click() ?? card.click();
+    await waitFor(() =>
+      expect(screen.getByText(/full video coming soon/i)).toBeInTheDocument()
+    );
   });
 });

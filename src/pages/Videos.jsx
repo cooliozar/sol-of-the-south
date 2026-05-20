@@ -169,8 +169,19 @@ export default function VideosPage() {
                         preload="metadata"
                       />
                     ) : (
-                      <div className="w-full h-full bg-zinc-900 flex items-center justify-center text-gray-500">
-                        Video not available
+                      <div className="w-full h-full bg-zinc-900 relative flex items-center justify-center">
+                        {selectedVideo.thumbnail_url && (
+                          <img
+                            src={selectedVideo.thumbnail_url}
+                            alt={selectedVideo.title}
+                            className="absolute inset-0 w-full h-full object-cover opacity-30"
+                          />
+                        )}
+                        <div className="relative z-10 text-center px-6">
+                          <Play className="w-14 h-14 mx-auto mb-4 text-gray-500" />
+                          <p className="text-gray-300 font-semibold text-lg mb-1">Full video coming soon</p>
+                          <p className="text-gray-500 text-sm">Video hosting is being set up. Check back shortly.</p>
+                        </div>
                       </div>
                     )}
                   </div>
