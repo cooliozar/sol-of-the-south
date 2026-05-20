@@ -1,5 +1,13 @@
 [
   {
+    "id": "photo-005",
+    "title": "First Jax Practice",
+    "image_url": "/images/photos/first-jax-practice.png",
+    "thumbnail_url": "/images/photos/first-jax-practice.png",
+    "category": "live",
+    "shoot_date": "2026-05-02"
+  },
+  {
     "id": "photo-001",
     "title": "Bobby — Promo",
     "image_url": "/images/photos/sol-promo-bobby.jpg",
