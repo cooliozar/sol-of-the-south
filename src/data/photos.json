@@ -1,5 +1,13 @@
 [
   {
+    "id": "photo-007",
+    "title": "Ivey & Jackson",
+    "image_url": "/images/photos/ivey-jackson.png",
+    "thumbnail_url": "/images/photos/ivey-jackson.png",
+    "category": "live",
+    "shoot_date": "2026-05-20"
+  },
+  {
     "id": "photo-006",
     "title": "Trey Live",
     "image_url": "/images/photos/trey-live.png",
@@ -13,7 +21,8 @@
     "image_url": "/images/photos/first-jax-practice.png",
     "thumbnail_url": "/images/photos/first-jax-practice.png",
     "category": "studio",
-    "shoot_date": "2026-05-19"
+    "shoot_date": "2026-05-19",
+    "pinned": true
   },
   {
     "id": "photo-001",
