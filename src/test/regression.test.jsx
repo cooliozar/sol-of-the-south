@@ -165,6 +165,18 @@ describe('Photos data', () => {
     expect(external).toHaveLength(0);
   });
 
+  it('First Practice is marked pinned', () => {
+    const entry = photosData.find((p) => p.title === 'First Practice');
+    expect(entry.pinned).toBe(true);
+  });
+
+  it('First Practice is the first entry after pinned sort', () => {
+    const pinned = photosData.filter(p => p.pinned);
+    const rest = photosData.filter(p => !p.pinned);
+    const sorted = [...pinned, ...rest];
+    expect(sorted[0].title).toBe('First Practice');
+  });
+
   it('contains an Ivey & Jackson entry', () => {
     const entry = photosData.find((p) => p.title === 'Ivey & Jackson');
     expect(entry).toBeDefined();

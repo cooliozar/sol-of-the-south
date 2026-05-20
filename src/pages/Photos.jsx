@@ -14,7 +14,10 @@ export default function PhotosPage() {
 
   const loadPhotos = async () => {
     const data = await Photo.list("-shoot_date");
-    setPhotos(data);
+    // Pinned photos always appear first, regardless of date
+    const pinned = data.filter(p => p.pinned);
+    const rest = data.filter(p => !p.pinned);
+    setPhotos([...pinned, ...rest]);
   };
 
   const filteredPhotos = (filter === "all" ? photos : photos.filter(p => p.category === filter))

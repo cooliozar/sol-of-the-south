@@ -21,7 +21,8 @@
     "image_url": "/images/photos/first-jax-practice.png",
     "thumbnail_url": "/images/photos/first-jax-practice.png",
     "category": "studio",
-    "shoot_date": "2026-05-19"
+    "shoot_date": "2026-05-19",
+    "pinned": true
   },
   {
     "id": "photo-001",
