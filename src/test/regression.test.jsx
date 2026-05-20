@@ -164,6 +164,22 @@ describe('Photos data', () => {
     );
     expect(external).toHaveLength(0);
   });
+
+  it('contains an Ivey & Jackson entry', () => {
+    const entry = photosData.find((p) => p.title === 'Ivey & Jackson');
+    expect(entry).toBeDefined();
+  });
+
+  it('Ivey & Jackson has a valid local image_url', () => {
+    const entry = photosData.find((p) => p.title === 'Ivey & Jackson');
+    expect(entry.image_url).toBe('/images/photos/ivey-jackson.png');
+    expect(entry.thumbnail_url).toBe('/images/photos/ivey-jackson.png');
+  });
+
+  it('Ivey & Jackson has category live', () => {
+    const entry = photosData.find((p) => p.title === 'Ivey & Jackson');
+    expect(entry.category).toBe('live');
+  });
 });
 
 // ── Press content ─────────────────────────────────────────────────────────────
