@@ -10,7 +10,7 @@ function LayoutContent({ children }) {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   // Hide layout on landing page
-  const isLandingPage = location.pathname === createPageUrl("Landing") || location.pathname === "/";
+  const isLandingPage = location.pathname === createPageUrl("Landing");
 
   // Set favicons and meta
   React.useEffect(() => {

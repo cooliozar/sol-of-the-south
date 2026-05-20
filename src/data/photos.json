@@ -1,5 +1,13 @@
 [
   {
+    "id": "photo-006",
+    "title": "Trey Live",
+    "image_url": "/images/photos/trey-live.png",
+    "thumbnail_url": "/images/photos/trey-live.png",
+    "category": "live",
+    "shoot_date": "2026-05-19"
+  },
+  {
     "id": "photo-005",
     "title": "First Practice",
     "image_url": "/images/photos/first-jax-practice.png",
